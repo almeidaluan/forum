@@ -1,4 +1,15 @@
-# Filtro com Ordenação
+#Projeto
+
+Uma copia do forum da alura.
+
+* Paginação 
+* Cache
+* Spring security
+* JWT
+* Monitoramento com Spring boot Actuator e Spring boot Admin
+* Documentando API com SWAGGER
+
+### Como utilizar a Ordenação
 
 - Ordenação passando os atributos [pagina,qtd,ordenacao] no endpoint commit 97195b2c8b608132f0b003e26e08ae11e6364302.
 
