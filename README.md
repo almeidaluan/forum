@@ -1,0 +1,9 @@
+# Filtro com Ordenação
+
+- Ordenação passando os atributos [pagina,qtd,ordenacao] commit 97195b2c8b608132f0b003e26e08ae11e6364302
+
+        localhost:8080/topicos?pagina=0&qtd=3&ordenacao=dataCriacao
+
+- Ordenação passando apenas o objeto Pageable
+
+        localhost:8080/topicos?page=0?size=10&sort=id,asc&sort=dataCriacao
