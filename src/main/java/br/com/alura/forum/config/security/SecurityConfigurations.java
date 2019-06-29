@@ -17,7 +17,9 @@ public class SecurityConfigurations extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         super.configure(http);
         http.authorizeRequests().antMatchers(HttpMethod.GET,"/topicos").permitAll();
-        http.authorizeRequests().antMatchers(HttpMethod.GET,"/topicos/*").permitAll();
+        http.authorizeRequests().antMatchers(HttpMethod.GET,"/topicos/*").permitAll()
+        .anyRequest().authenticated().and().formLogin();
+
     }
     //Configuração de Autorização
     @Override
