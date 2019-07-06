@@ -16,8 +16,10 @@ Uma copia do forum da alura.
  ```service``` - Trata as regras de negocio <br />
  ```config/validacao```  - Classes responsaveis por tratar as Exceptions geradas no sistema. <br/>
  ```config/security``` - Classes responsaveis por tratar a autenticação e autorização no sistema utilizando jwt. <br/>
+```config/security/filter``` - Vai executar a função de pegar/interceptar o token no cabeçario e verificar se ta ok <br />
 ```controller/dto``` - Criado para retornar apenas informações pertinentes a consulta do usuario evitando retornar um monte de informações desnecessarias.<br />
 ```controller/form``` - Criado para mandar informações que são recebidas no body. / Utilizando BeanValidation
+
 ### Como utilizar a Ordenação
 
 - Ordenação passando os atributos [pagina,qtd,ordenacao] no endpoint commit 97195b2c8b608132f0b003e26e08ae11e6364302.

@@ -1,4 +1,4 @@
-package br.com.alura.forum.config.security;
+package br.com.alura.forum.config.security.filter;
 
 
 import org.springframework.web.filter.OncePerRequestFilter;
