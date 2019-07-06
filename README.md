@@ -11,7 +11,7 @@ Uma copia do forum da alura.
 
 # Sumário de arquivos
 
- - ```repository``` - Responsavel por fazer a interface com o banco. <br />
+ ```repository``` - Responsavel por fazer a interface com o banco. <br />
  ```model``` - Contem todas as classes do sistema que são persistidas no banco. <br />
  ```service``` - Trata as regras de negocio <br />
  ```config/validacao```  - Classes responsaveis por tratar as Exceptions geradas no sistema. <br/>
