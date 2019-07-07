@@ -43,6 +43,7 @@ public class SecurityConfigurations extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
 
         http.authorizeRequests().antMatchers(HttpMethod.GET,"/topicos").permitAll();
+        http.authorizeRequests().antMatchers(HttpMethod.GET,"/**").permitAll();
         http.authorizeRequests().antMatchers(HttpMethod.POST,"/auth").permitAll();
         http.authorizeRequests().antMatchers(HttpMethod.GET,"/topicos/*").permitAll();
         http.authorizeRequests().antMatchers(HttpMethod.GET,"/actuator/**").permitAll()
