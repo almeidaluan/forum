@@ -44,7 +44,8 @@ public class SecurityConfigurations extends WebSecurityConfigurerAdapter {
 
         http.authorizeRequests().antMatchers(HttpMethod.GET,"/topicos").permitAll();
         http.authorizeRequests().antMatchers(HttpMethod.POST,"/auth").permitAll();
-        http.authorizeRequests().antMatchers(HttpMethod.GET,"/topicos/*").permitAll()
+        http.authorizeRequests().antMatchers(HttpMethod.GET,"/topicos/*").permitAll();
+        http.authorizeRequests().antMatchers(HttpMethod.GET,"/actuator/**").permitAll()
         .anyRequest().authenticated().and().csrf().disable().sessionManagement()
         .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
         .and().addFilterBefore(new AutenticacaoViaTokenFilter(tokenService,userRepository), UsernamePasswordAuthenticationFilter.class); //indica que não usaremos mais sessao e usaremos token
