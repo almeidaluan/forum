@@ -43,7 +43,6 @@ public class SecurityConfigurations extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
 
         http.authorizeRequests().antMatchers(HttpMethod.GET,"/topicos").permitAll();
-        http.authorizeRequests().antMatchers(HttpMethod.GET,"/**").permitAll();
         http.authorizeRequests().antMatchers(HttpMethod.POST,"/auth").permitAll();
         http.authorizeRequests().antMatchers(HttpMethod.GET,"/topicos/*").permitAll();
         http.authorizeRequests().antMatchers(HttpMethod.GET,"/actuator/**").permitAll()
@@ -63,7 +62,7 @@ public class SecurityConfigurations extends WebSecurityConfigurerAdapter {
     //Configuração de recursos estaticos(js,css,imagens,etc ...) utilizado quando se usa jsp,thymeleaf
     @Override
     public void configure(WebSecurity web) throws Exception {
-
+        web.ignoring().antMatchers("/**.html", "/v2/api-docs", "/webjars/**", "/configuration/**", "/swagger-resources/**");
     }
 
 //    public static void main(String[] args) {
