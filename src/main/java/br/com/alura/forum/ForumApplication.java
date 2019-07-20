@@ -12,9 +12,6 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @SpringBootApplication
 @EnableSpringDataWebSupport
 @EnableCaching
-@Configuration
-@EnableAutoConfiguration
-@EnableAdminServer
 @EnableSwagger2
 public class ForumApplication {
 
